@@ -4,7 +4,7 @@ const initialState = {
   list: [],
   filterCategory: "all",
 };
-const expenseSlice = createSlice({
+const slice = createSlice({
   name: "expenses",
   initialState,
   reducers: {
@@ -31,6 +31,6 @@ export const {
   removeExpense,
   clearAllExpenses,
   setFilterCategory,
-} = expenseSlice.actions;
+} = slice.actions;
 
-export default expenseSlice.reducer;
+export default slice.reducer;

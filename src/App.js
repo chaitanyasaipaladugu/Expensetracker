@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import ExpenseForm from "./components/ExpenseForm";
+import ExpenseList from "./components/ExpenseList";
+import Filter from "./components/Filter";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="container">
+        <header className="header">
+          <h1>Expense Tracker</h1>
+          <p>Track your spending with ease.</p>
+        </header>
+
+        <div className="grid">
+          <section className="card">
+            <h2 className="card-title">Add Expense</h2>
+            <ExpenseForm />
+          </section>
+
+          <section className="card">
+            <h2 className="card-title">Filter</h2>
+            <Filter />
+          </section>
+        </div>
+
+        <section className="card">
+          <ExpenseList />
+        </section>
+      </div>
     </div>
   );
 }
-
-export default App;
